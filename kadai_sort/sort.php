@@ -7,31 +7,26 @@
 <body>
     <p>
         <?php
-        // ソート関数の定義
         function sort_2way($array, $order) {
             if ($order) {
-                sort($array); // 昇順
+                echo "昇順にソートします<br>";
+                sort($array);
             } else {
-                rsort($array); // 降順
+                echo "降順にソートします<br>";
+                rsort($array);
             }
 
-            // 結果を表示
             foreach ($array as $val) {
                 echo $val . "<br>";
             }
         }
 
-        // ソート対象の配列
         $nums = [15, 4, 18, 23, 10];
 
-        // 昇順で表示
-        echo "昇順ソート:<br>";
         sort_2way($nums, true);
 
         echo "<br>";
 
-        // 降順で表示
-        echo "降順ソート:<br>";
         sort_2way($nums, false);
         ?>
     </p>
